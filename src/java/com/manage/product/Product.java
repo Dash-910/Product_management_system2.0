@@ -22,6 +22,16 @@ public class Product {
         ProductWarranty = productWarranty;
     }
 
+    public Product(String ProductName, String ProductType, String ProductPlace, String ProductBrand, double ProductPrice, int ProductWarranty) {
+        super();
+        this.ProductName = ProductName;
+        this.ProductType = ProductType;
+        this.ProductPlace = ProductPlace;
+        this.ProductBrand = ProductBrand;
+        this.ProductPrice = ProductPrice;
+        this.ProductWarranty = ProductWarranty;
+    }
+    
     public Product() {
         super();
         // TODO Auto-generated constructor stub

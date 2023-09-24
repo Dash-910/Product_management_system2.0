@@ -9,11 +9,11 @@ import com.manage.product.Product;
 import com.manage.product.ProductDAO;
 
 public class AddProduct extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         // Parse the parameters to the correct data types
-        int id = Integer.parseInt(request.getParameter("productId"));
         String name = request.getParameter("productName");
         String type = request.getParameter("productType");
         String brand = request.getParameter("productBrand");
@@ -21,7 +21,7 @@ public class AddProduct extends HttpServlet {
         int warranty = Integer.parseInt(request.getParameter("productWarranty"));
         double price = Double.parseDouble(request.getParameter("productPrice"));
 
-        Product product = new Product(id, name, type, brand, place, price, warranty);
+        Product product = new Product(name, type, brand, place, price, warranty);
         boolean success = ProductDAO.insertProductToDB(product);
 
         if (success) {
