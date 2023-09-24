@@ -65,7 +65,7 @@ public class ProductDAO {
             
             while(set.next())
             {
-                int id = set.getInt("pid");
+            int id = set.getInt("pid");
             String name = set.getString("pname");
             String type = set.getString("ptype");
             String brand = set.getString("pbrand");

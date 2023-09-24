@@ -19,7 +19,7 @@ public class ViewAllProducts extends HttpServlet{
         
         request.setAttribute("productList", productList);
         
-        request.getRequestDispatcher("viewAllProducts.jsp").forward(request,response);
+        request.getRequestDispatcher("showInventry.jsp").forward(request,response);
         
     }
     
